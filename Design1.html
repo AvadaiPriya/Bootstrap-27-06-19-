@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+    
+    b{
+      font-size: 28px;
+    }
+    p
+    {
+      font-size: 12px;
+    }
+   
+    .card-img{
+      position: relative;
+    top: 0;
+    left: 0;
+    }
+    .image{
+      background-color: #212929;
+      width:10em;
+      height:5em;
+      position: absolute;
+    top: 200px;
+    left: 25px;
+    }
+    .column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.card{
+  border:black;
+}
+.flex-column{
+  background-color: #fff;
+ text-decoration-color: #000;
+ margin-left: 5px;
+}
+.nav-item{
+  color: #ffffff;
+}
+.progress-bar{
+  color: #2b949a;
+}
+.panel{
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 601px) {
+  div.nav  {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  div.nav {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 601px) {
+  div.content  {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  div.content {
+    font-size: 10px;
+  }
+  div.hidden{
+    display:none;
+  }
+}
+.card-deck{
+  text-align: center;
+}
+.P-Images{
+      overflow: auto;
+      
+    }
+    
+    .card{
+      margin-top: 10px;
+    }
+    hr{
+  margin-bottom: 0px;
+}
+.images{
+  float: left;
+}
+.image1{
+  margin: 2px;
+  float: left;
+  font-size: 10px;
+}
+.navbar{
+  margin-top: 5px;
+}.form{
+  float:left;
+}
+.img{
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+.F-Images{
+  overflow: auto;
+}.imgs{
+  float: left;
+}
+.card.footer{
+  height: 5px;
+}
+
+</style>
+ 
+</head>
+<body>
+
+  <div class="container-fluid">
+  <div class="card-header bg-light">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+  <a class="navbar-brand" href="#"><b>Zava</b></a><br>
+        <form class="form-inline">
+      
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" arial-label="Search">
+ 
+  </form>
+  
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+     <div class="navbar-nav ml-auto">
+   
+   <ul class="navbar-nav ml-auto">
+     
+  <li><i class="fas fa-bell" style="color: white"></i></li>
+
+    <li class="nav-item "><a href="#" class="nav-link" > Siva</a></li>
+    <li class="nav-item "><a href="#" class="nav-link">Logout</a></li>
+    
+  </ul>
+
+
+   
+  </div>
+</div>
+
+
+
+</nav>
+</div>
+</div>
+
+  
+
+<br>
+
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    
+  <div class="col-sm-2 ">
+    <div class="btn-group" role="group">
+    <!-- Trigger Button HTML -->
+      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#2b949a" >
+      <i class="fa fa-list" aria-hidden="true"></i>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+   
+     
+
+    
+  <h5 style="background-color: #F2EDED">Go to</h5>
+     
+
+
+<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+  <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">Home </a>
+  <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true">Profile</a>
+  <a class="nav-link" id="v-pills-friends-tab" data-toggle="pill" href="#v-pills-Friends" role="tab" aria-controls="v-pills-Friends" aria-selected="false">Friends</a>
+  <a class="nav-link" id="v-pills-Request-tab" data-toggle="pill" href="#v-pills-Request" role="tab" aria-controls="v-pills-Request" aria-selected="false">Friend Requests</a>
+  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Circles</a>
+  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Circle Requests</a>
+
+</div>
+<h5 style="background-color: #F2EDED">Your Circles</h5>
+<div>
+<i class="fas fa-circle-notch " style="font-size:50px; color:red" ></i>
+<i class="fas fa-circle-notch" style="font-size:50px; color:blue" ></i>
+<i class="fas fa-circle-notch" style="font-size:50px; color:green" ></i>
+<i class="fas fa-circle-notch" style="font-size:50px; color:black" ></i>
+<i class="fas fa-circle-notch" style="font-size:50px; color:skyblue" ></i>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-sm-7">
+  <div class="position-static">
+<div class="tab-content" id="v-pills-tabContent" aria-orientation="horizontal" >
+  <div class="tab-pane fade " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-tab">
+    <div class="container">
+    
+        <div class="card">
+          <div class="card-header"> <b>Create Post</b></div>
+          <div class="Card-Body">Something Write here<br>........
+          </div>
+          <div class="card-footer">
+            <i class="fas fa-camera-retro">camera/Video </i>
+            <i class="fas fa-user-tag"> Tag Friends </i>
+            <i class="fas fa-smile">Ur feelings </i>
+          </div>
+        </div>
+
+       <div class="card">
+              <div class="card-header">
+                <div class="P-Images">
+    
+                <div class="image" >
+                    <img class="img2" src="../IMG/Image.jpg" alt="Priya" width="70" height="70">
+                  </div>
+                    <div class="image1">Priya<br>
+                    Intern at Tarento Technologies,
+                    Bangalore.<br>5hrs</div>
+              
+                </div>
+            </div>
+            <div class="Card-Body">
+              <div class="P-Images" overflow="auto">
+    
+                <div class="images" object-fit="cover">
+                    <img class="img2" src="../IMG/newsfeed.jpg" alt="Priya">
+                  </div>
+                    <div class="image2" >As good as a story is at hitting the reasons why the company is great, consumers need to know: "What's in it for me?" The blurb should focus on one or two key benefits. Let consumers know what they get when they do business with the company. Examples of benefits might be convenience, superior products, award-winning services or customization for the customer's needs. For example, a promotional product provider might express the benefit like this: "Be remembered in a way as unique as your company.</div>
+              
+                </div><hr>
+                <div class="navbar-nav ml-auto">
+                  <ul class="navbar-nav ml-auto">
+                    <li><i class="fas fa-thumbs-up"> Like Page</i></li><hr>
+                  </ul>
+                </div><hr>
+                <div class="d-flex justify-content-start">
+                    <div class="p-2"><i class="far fa-thumbs-up">Like</i></div>
+                    <div class="p-2"><i class="far fa-comment">Comment</i></div>
+                    <div class="p-2"><i class="far fa-share-square">Share</i></div>
+                </div>
+                <div class="card-footer">
+                  <div class="F-Images">
+                  <div class="imgs">
+                  <img class="img" src="../IMG/Image.jpg" alt="Priya">
+                  </div>
+                  <div class="form">
+                    <form class="form-inline">
+      
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="write a comment"></textarea>
+ 
+                     </form>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+                   <div class="card">
+                      <div class="card-header">
+                        <div class="P-Images">
+            
+                        <div class="image" >
+                            <img class="img2" src="../IMG/Image.jpg" alt="Priya" width="70" height="70">
+                          </div>
+                            <div class="image1">Priya<br>
+                            Intern at Tarento Technologies,
+                            Bangalore.<br>5hrs</div>
+                      
+                        </div>
+                    </div>
+                    <div class="Card-Body">
+                      <div class="P-Images" overflow="auto">
+            
+                        <div class="images" object-fit="cover">
+                            <img class="img2" src="../IMG/newsfeed.jpg" alt="Priya">
+                          </div>
+                            <div class="image2" >As good as a story is at hitting the reasons why the company is great, consumers need to know: "What's in it for me?" The blurb should focus on one or two key benefits. Let consumers know what they get when they do business with the company. Examples of benefits might be convenience, superior products, award-winning services or customization for the customer's needs. For example, a promotional product provider might express the benefit like this: "Be remembered in a way as unique as your company.</div>
+                      
+                        </div><hr>
+                        <div class="navbar-nav ml-auto">
+                          <ul class="navbar-nav ml-auto">
+                            <li><i class="fas fa-thumbs-up"> Like Page</i></li><hr>
+                          </ul>
+                        </div><hr>
+                        <div class="d-flex justify-content-start">
+                            <div class="p-2"><i class="far fa-thumbs-up">Like</i></div>
+                            <div class="p-2"><i class="far fa-comment">Comment</i></div>
+                            <div class="p-2"><i class="far fa-share-square">Share</i></div>
+                        </div>
+                        <div class="card-footer">
+                          <div class="F-Images">
+                          <div class="imgs">
+                          <img class="img" src="../IMG/Image.jpg" alt="Priya">
+                          </div>
+                          <div class="form">
+                            <form class="form-inline">
+              
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="write a comment"></textarea>
+         
+                             </form>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+       
+
+ 
+      
+  
+</div>
+
+
+
+
+  </div>
+  <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+    
+    <div class="card">
+
+  
+  <div class="card-img">
+  <img class="card-img-top" src= "../IMG/newsfeed1.jpg" alt="Card image cap" height="250px">
+
+<!--       <img class="card-img-top" src="profile1.jpeg" alt="Card image cap">
+ -->   
+
+
+</div>
+
+
+   
+
+ <img class="image" src="../IMG/Image.jpg" alt="image" ><br>
+ <b>AVADAI PRIYA  L</b><p> Intern at Tarento Technologies,Bangalore</p>
+
+
+
+
+
+<br><br>
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="color: black" >Experience and Education:
+          
+          </a>
+        </h4>
+
+        <div id="collapse1" class="panel-collapse collapse in">
+        
+     
+
+    <h1><b>Experience</b></h1>
+    <p1>Intern at Google Incorporation for 1 years<br>
+    2018-2019.</p1><div class="card-footer text-center">  Show More </div><b><hr></b>
+
+    <h1><b>Education</b></h1>
+    <p1>Dr.Sivanthi Aditanar College Of Engineering<br>B.E(CSE)<br>2015-2019</p1><br>
+        <div class="card-footer text-center">  Show More </div>
+  
+
+</div>
+</div>
+</div>
+<br>
+
+ <div class="panel panel-default">
+    
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="color: black">Accomplishments:</a>
+
+        <div id="collapse2" class="panel-collapse collapse in">
+        
+     
+
+   
+    <div class="card bg-light text-dark">
+      <h4><b>Project</b></h4>
+      <p1>Digital Image Processing:Satellite Images</p1>
+    </div>
+        <div class="card-footer text-center">  Show More </div>
+ 
+</div>
+</div>
+</div>
+<br>
+
+
+ <div class="row">
+  
+   
+      
+
+ 
+  <div class="column">
+
+
+    <div class="card">
+    <div class="card-body bg-light">
+      
+      <dl>
+        <dt> Java
+      </dt>
+       <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-info " style="width:30%"></div>
+  </div>
+      <dt>C++</dt>
+       <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-info" style="width:30%"></div>
+  </div>
+      <dt>HTML</dt>
+       <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-info" style="width:30%"></div>
+  </div>
+    </dl>
+        <div class="card-footer text-center">  Show More </div>
+    </div>
+  
+
+
+</div>
+
+ 
+</div>
+
+  <div class="column">
+
+    <div class="card">
+    <div class="card-body bg-light">
+         
+      <h2><b>Tools Known</b></h2>
+      <ul>
+        <li>Eclipse</li>
+        <li>Sublime</li>
+        <li>Selenium</li>
+      </ul>
+          <div class="card-footer text-center">  Show More </div>
+    </div>
+  
+</div>
+</div>
+</div>
+
+<br>
+
+
+ <div class="panel panel-default">
+    
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="color: black">Interests:</a>
+        </h4>
+
+        <div id="collapse3" class="panel-collapse collapse in">
+
+    
+    <ul>
+      <li>Digital Image Processing</li>
+      <li>Web Development</li>
+    </ul>
+      <div class="card-footer text-center">
+        Show More </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  </div>
+</div>
+  
+
+  <div class="tab-pane fade" id="v-pills-Friends" role="tabpanel" aria-labelledby="v-pills-friends-tab">
+ 
+ <div class="card bg-light">
+  <div class="card-header">
+    <form class="form-inline">
+  <input class="form-control mr-sm-2 bg-light" type="search" placeholder="Search" arial-label="Search" >
+  <button class="btn btn-outline-success my-2 my-sm-o" type="submit" style="background-color: black">Search</button>
+  </form>
+</div>
+   <table class="table table-striped bg-light ">
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Avadai Priya</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Message</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Priya</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Message</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Bala</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Message</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Ramya</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Message</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Krishna</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Message</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Vimal</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Message</button></td>
+      </tr>
+       <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Vishnu Priya</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Message</button></td>
+      </tr>
+       <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Naveen</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Message</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+  
+ <div class="tab-pane fade" id="v-pills-Request" role="tabpanel" aria-labelledby="v-pills-Request-tab">
+ 
+   
+ <div class="card">
+  <div class="card-header">
+    <form class="form-inline">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" arial-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-o" type="submit" style="background-color: black">Search</button>
+  </form>
+</div>
+   <table class="table table-striped bg-light">
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Avadai Priya</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Friend Request</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Priya</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Friend Request</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Bala</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Friend Request</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Ramya</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Friend Request</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Krishna</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Friend Request</button></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Vimal</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Friend Request</button></td>
+      </tr>
+       <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Vishnu Priya</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Friend Request</button></td>
+      </tr>
+       <tr>
+        <td> <img src="../IMG/Image.jpg" alt="vj" height="50em" width="80em"></td>
+        <td>  <b>Naveen</b>
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+        <td><button>Friend Request</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+  
+  
+  
+   <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"></div>
+</div>
+</div>
+</div>
+
+
+   
+
+ <div class="col-sm-3 hidden">
+
+ 
+  
+   
+      <div class="container">
+    
+    <div class="card" style="background-color: white">
+  <div class="card-header">Suggested Friends</div>
+<div class="card-body">
+       <table class="table table-striped bg-light">
+      <tr>
+        <td> <img src="../IMG/Image2.jpg" alt="vj" height="20em" width="20em"></td>
+        <td>  Avadai Priya
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image2.jpg" alt="vj" height="20em" width="20em"></td>
+        <td>   Priya
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+      </tr>
+      <tr>
+        <td> <img src="../IMG/Image2.jpg" alt="vj" height="20em" width="20em"></td>
+        <td>  Bala Priya
+        <p>Intern at Tarento Technologies,Bangalore</p></td>
+      </tr>
+    </table>
+
+<h5 style="background-color: #F2EDED">Your Circles</h5>
+<div>
+<i class="fas fa-circle-notch " style="font-size:50px; color:red" ></i>
+<i class="fas fa-circle-notch" style="font-size:50px; color:blue" ></i>
+<i class="fas fa-circle-notch" style="font-size:50px; color:green" ></i>
+<i class="fas fa-circle-notch" style="font-size:50px; color:black" ></i>
+<i class="fas fa-circle-notch" style="font-size:50px; color:skyblue" ></i>
+
+
+    </div>
+  </div>
+  </div>
+</div>
+ </div>
+
+</div>
+
+
+   
+
+   
+
+</div>
+</div>
+
+
+  
+
+     
+</body>
+ 
+</html>
